@@ -1,0 +1,6 @@
+venv
+sample1.pdf
+sample2.xlsx
+sample3.csv
+.pytest_cache
+.idea
