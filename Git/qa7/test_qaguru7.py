@@ -4,7 +4,7 @@ from zipfile import ZipFile
 from PyPDF2 import PdfReader
 import csv
 
-zip_file_path = '/Users/stanislavdudnik/Desktop/Git/qa_guru7/resources/archive.zip'
+zip_file_path = '/Users/stanislavdudnik/Desktop/Git/qa7/resources/archive.zip'
 pdf_file_name = 'sample1.pdf'
 xlsx_file_name = 'sample2.xlsx'
 csv_file_name = 'sample3.csv'
