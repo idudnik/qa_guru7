@@ -1,3 +1,0 @@
-pytest >7
-openpyxl >= 3.1.2
-PyPDF2 >=  3
