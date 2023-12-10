@@ -1,10 +1,18 @@
+from pathlib import Path
+
 from openpyxl import load_workbook
 import pytest
 from zipfile import ZipFile
 from PyPDF2 import PdfReader
 import csv
+import os.path
 
-zip_file_path = '/Users/stanislavdudnik/Desktop/Git/qa7/resources/archive.zip'
+
+current_dir = Path(__file__).resolve().parent
+resources_dir = f"{current_dir}/resources"
+
+
+zip_file_path = os.path.join(resources_dir, 'archive.zip')
 pdf_file_name = 'sample1.pdf'
 xlsx_file_name = 'sample2.xlsx'
 csv_file_name = 'sample3.csv'
