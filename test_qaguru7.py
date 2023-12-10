@@ -6,7 +6,6 @@ from PyPDF2 import PdfReader
 import csv
 import os.path
 
-
 current_dir = Path(__file__).resolve().parent
 resources_dir = f"{current_dir}/resources"
 zip_file_path = os.path.join(resources_dir, 'archive.zip')
@@ -29,14 +28,13 @@ def archive_file():
         with ZipFile(zip_file_path, 'w') as zipf:
             # Add each file to the archive
             for file_path in files_to_zip:
-                # arcname - the name of the file inside the archive (can be changed)
                 sample = os.path.basename(file_path)
                 zipf.write(file_path, sample)
 
         print(f"Архив создан по пути: {zip_file_path}")
 
     with ZipFile(zip_file_path, 'r') as archive:
-        yield archive  # Yield the ZipFile object
+        yield archive
 
 
 def test_archive_file_exists(archive_file):
