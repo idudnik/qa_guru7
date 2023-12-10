@@ -6,6 +6,7 @@ from PyPDF2 import PdfReader
 import csv
 import os.path
 
+
 current_dir = Path(__file__).resolve().parent
 resources_dir = f"{current_dir}/resources"
 zip_file_path = os.path.join(resources_dir, 'archive.zip')
