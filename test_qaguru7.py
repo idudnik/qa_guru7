@@ -28,13 +28,14 @@ def archive_file():
         with ZipFile(zip_file_path, 'w') as zipf:
             # Add each file to the archive
             for file_path in files_to_zip:
+                # arcname - the name of the file inside the archive (can be changed)
                 sample = os.path.basename(file_path)
                 zipf.write(file_path, sample)
 
         print(f"Архив создан по пути: {zip_file_path}")
 
     with ZipFile(zip_file_path, 'r') as archive:
-        yield archive
+        yield archive  # Yield the ZipFile object
 
 
 def test_archive_file_exists(archive_file):
